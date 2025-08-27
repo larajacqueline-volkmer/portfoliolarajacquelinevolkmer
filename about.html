@@ -1,31 +1,46 @@
+<!-- =========================
+     about.html (Über mich)
+========================= -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Über mich – Lara Volkmer</title>
-  <meta name="description" content="Über mich – Medieninformatik-Studentin, spezialisiert auf EdTech, KI, UX-Design und Creative Tech Storytelling.">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Über mich – Lara Jacqueline Volkmer</title>
+  <meta name="theme-color" content="#7b4fe4" />
+
+  <!-- Fonts (Poppins + Rajdhani) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip-Link -->
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
-  <header class="hero">
+  <!-- Hero -->
+  <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer"
-           width="120" height="120" class="portrait-thumbnail"
-           fetchpriority="high" decoding="async">
+      <img
+        src="images/lara-portrait.jpg"
+        alt="Portrait von Lara Jacqueline Volkmer"
+        class="portrait-thumbnail"
+        width="120" height="120"
+        fetchpriority="high" decoding="async"
+      />
       <div>
         <h1>Über mich</h1>
-        <p>Medieninformatik, KI-Kunst und Design</p>
+        <p>Medieninformatik &amp; KI-Kunst in moderner Ästhetik</p>
       </div>
     </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
-    <a href="about.html" class="active" aria-current="page">Über mich</a>
+    <a href="about.html" class="active">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
     <a href="bilder.html">KI-Bilder</a>
@@ -39,23 +54,37 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
-    <section>
-      <h2>Willkommen!</h2>
-      <p>Ich bin Lara Jacqueline Volkmer, Medieninformatik-Studentin mit Leidenschaft für digitale Kreativität, EdTech und KI-Design. Meine Spezialgebiete:</p>
+  <!-- Inhalt -->
+  <main id="maincontent">
+    <section class="content">
+      <h2>Hallo, ich bin Lara.</h2>
+      <p>
+        Medieninformatikstudentin, Gestalterin und Technik-Enthusiastin. Für mich ist
+        Technologie nicht nur Werkzeug, sondern Mittel, Ideen greifbar zu machen und
+        neue Perspektiven zu eröffnen. Ich verbinde UX, KI und Ästhetik zu klaren,
+        menschlichen digitalen Erlebnissen.
+      </p>
 
-      <ul class="highlights">
-        <li><strong>Education Tech (EdTech):</strong> Lernplattformen & Apps mit XP, Quests und Level-Ups.</li>
-        <li><strong>Gamified Productivity:</strong> Selbstorganisation erlebbar machen durch Checkpoints & Progression.</li>
-        <li><strong>Empathic KI:</strong> Interfaces und KI-Stimmen mit Wärme und Nuancen.</li>
-        <li><strong>Digital Identity:</strong> Neon-Portfolios, Logos & Branding für Creator.</li>
-        <li><strong>UI/UX mit futuristischem Twist:</strong> Funktionalität trifft Cyberpunk & Pastell.</li>
-        <li><strong>Psychologie & Technologie:</strong> Markt-, Werbe- & Medienpsychologie in UX und KI.</li>
-        <li><strong>Creative Tech Storytelling:</strong> Produkte, die Geschichten erzählen – von Future-Self-Dialogen bis Cyborg-Videos.</li>
+      <h3>Meine Spezialgebiete</h3>
+      <ul>
+        <li><strong>Education Tech (EdTech):</strong> Lernplattformen & Apps mit Gamification – XP, Quests, Level-Ups.</li>
+        <li><strong>Gamified Productivity:</strong> Tools, die Selbstorganisation in Levels, Checkpoints & Progression erlebbar machen.</li>
+        <li><strong>Empathic KI:</strong> Interfaces & KI-Stimmen mit Wärme, Nuancen und Menschlichkeit.</li>
+        <li><strong>Digital Identity:</strong> Visuelle Identitäten & Branding-Tools für Creator – von Neon-Portfolios bis Logos.</li>
+        <li><strong>UI/UX mit futuristischem Twist:</strong> Funktion + Ästhetik, inspiriert von Neon, Cyberpunk & Pastell.</li>
+        <li><strong>Psychologie & Technologie:</strong> Markt-, Werbe- & Medienpsychologie trifft KI & UX – Technik menschlich vermitteln.</li>
+        <li><strong>Creative Tech Storytelling:</strong> Produkte, die Geschichten erzählen – von Cyborg-Videos bis Future-Self-Dialogen.</li>
       </ul>
+
+      <p>
+        Meine Arbeit beginnt dort, wo Neugier auf Kreativität trifft. Ich möchte Inhalte
+        aufspalten, Strukturen verstehen und daraus Lösungen entwickeln, die nicht nur
+        funktionieren, sondern berühren und begeistern.
+      </p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer role="contentinfo">
     <p>
       <a href="impressum.html">Impressum</a> |

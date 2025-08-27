@@ -1,31 +1,46 @@
+<!-- =========================
+     index.html (Startseite)
+========================= -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio – Lara Jacqueline Volkmer</title>
-  <meta name="description" content="Portfolio von Lara Jacqueline Volkmer – Medieninformatik, KI-Kunst, UI/UX-Design.">
-  <meta name="theme-color" content="#6a3e6a">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="theme-color" content="#7b4fe4" />
+
+  <!-- Fonts (Poppins + Rajdhani) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip-Link -->
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-  <header class="hero">
+
+  <!-- Hero -->
+  <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer"
-           width="120" height="120" class="portrait-thumbnail"
-           fetchpriority="high" decoding="async">
+      <img
+        src="images/lara-portrait.jpg"
+        alt="Portrait von Lara Jacqueline Volkmer"
+        class="portrait-thumbnail"
+        width="120" height="120"
+        fetchpriority="high" decoding="async"
+      />
       <div>
         <h1>Lara Jacqueline Volkmer</h1>
-        <p>Medieninformatik & KI-Kunst in moderner Ästhetik</p>
-        <a href="contact.html" class="cta-button">Kontakt aufnehmen</a>
+        <p>Medieninformatik &amp; KI-Kunst in moderner Ästhetik</p>
+        <a href="contact.html" class="cta-button" aria-label="Kontakt aufnehmen">Kontakt aufnehmen</a>
       </div>
     </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
-    <a href="index.html" class="active" aria-current="page">Home</a>
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
@@ -40,7 +55,8 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
+  <!-- Inhalt -->
+  <main id="maincontent">
     <section class="cards">
       <div class="card">
         <h2>Individuelle Illustrationen</h2>
@@ -60,6 +76,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer role="contentinfo">
     <p>
       <a href="impressum.html">Impressum</a> |
