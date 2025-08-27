@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://larajacqueline-volkmer.netlify.app/sitemap.xml

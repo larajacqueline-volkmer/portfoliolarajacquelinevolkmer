@@ -1,1 +1,30 @@
-{}
+{
+  // Automatisch alle Dateien speichern
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // Einheitliche Tabs
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  // HTML/CSS/JS Formatierung
+  "editor.formatOnSave": true,
+  "html.format.indentInnerHtml": true,
+  "css.validate": true,
+  "javascript.validate.enable": true,
+
+  // Live Server: fester Port
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+
+  // Explorer: versteckte Dateien anzeigen
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+
+  // Schriftarten (optional)
+  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14
+}

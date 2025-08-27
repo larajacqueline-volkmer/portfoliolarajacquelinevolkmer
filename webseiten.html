@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Webseiten – Lara Volkmer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Webdesigns und Webseiten von Lara Jacqueline Volkmer – UI/UX mit modernem und futuristischem Touch.">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero" role="banner">
-    <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" />
-      <div>
-        <h1>Webseiten</h1>
-        <p>Entwickelte Weblösungen – modern, funktional und kreativ</p>
-      </div>
-    </div>
+  <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
+
+  <header class="hero">
+    <h1>Webseiten</h1>
+    <p>Designs, die Funktionalität und Ästhetik vereinen</p>
   </header>
 
-  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
     <a href="bilder.html">KI-Bilder</a>
     <a href="logos.html">KI-Logos</a>
-    <a href="webseiten.html" class="active">Webseiten</a>
+    <a href="webseiten.html" class="active" aria-current="page">Webseiten</a>
     <a href="shop.html">Shop</a>
     <a href="contact.html">Kontakt</a>
     <a href="impressum.html">Impressum</a>
@@ -34,20 +32,20 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main role="main">
-    <section class="gallery-grid" aria-label="Galerie von Webseiten">
-      <a href="images/website-1.jpg" target="_blank">
-        <img src="images/website-1.jpg" alt="Screenshot einer responsiven Portfolio-Website" />
-      </a>
-      <a href="images/website-2.jpg" target="_blank">
-        <img src="images/website-2.jpg" alt="Webdesign mit retroinspiriertem Farbschema" />
-      </a>
-      <a href="images/website-3.jpg" target="_blank">
-        <img src="images/website-3.jpg" alt="UI-Komposition einer Landingpage mit KI-Elementen" />
-      </a>
-      <a href="images/website-4.jpg" target="_blank">
-        <img src="images/website-4.jpg" alt="E-Commerce Webseite mit modernem Layout" />
-      </a>
+  <main class="content" id="maincontent" tabindex="-1">
+    <section class="gallery">
+      <figure>
+        <img src="images/web1.jpg" alt="Futuristisches Webseiten-Design mit Neonfarben" width="800" height="600" loading="lazy">
+        <figcaption>Futuristisches Design mit Neonfarben</figcaption>
+      </figure>
+      <figure>
+        <img src="images/web2.jpg" alt="Minimalistische Portfolio-Webseite" width="800" height="600" loading="lazy">
+        <figcaption>Minimalistische Portfolio-Webseite</figcaption>
+      </figure>
+      <figure>
+        <img src="images/web3.jpg" alt="Pastellfarbene Landingpage für kreative Projekte" width="800" height="600" loading="lazy">
+        <figcaption>Landingpage in Pastellfarben</figcaption>
+      </figure>
     </section>
   </main>
 

@@ -1,3 +1,4 @@
+/* Basis */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -5,13 +6,33 @@ body {
   color: #333;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: #fff;
+  color: #000;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  z-index: 10000;
+}
+
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #c8a2c8, #e0cce0);
   color: white;
   padding: 4rem 1rem;
   text-align: center;
 }
-
 .hero-content-with-image {
   display: flex;
   align-items: center;
@@ -20,7 +41,6 @@ body {
   gap: 1.5rem;
   text-align: left;
 }
-
 .portrait-thumbnail {
   width: 120px;
   height: 120px;
@@ -28,19 +48,15 @@ body {
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
 .hero-content-with-image h1 {
   margin: 0;
   font-size: 2.5rem;
   font-family: 'Rajdhani', sans-serif;
-  color: white;
 }
-
 .hero-content-with-image p {
   font-size: 1.2rem;
   color: white;
 }
-
 .cta-button {
   display: inline-block;
   margin-top: 1.5rem;
@@ -51,13 +67,16 @@ body {
   border-radius: 4px;
   font-weight: bold;
 }
+.cta-button:hover {
+  background: #eee;
+}
 
+/* Navigation */
 .main-nav {
   background: #fff;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
-
 .main-nav a {
   display: inline-block;
   padding: 1rem;
@@ -65,12 +84,19 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
 .main-nav a:hover,
 .main-nav a.active {
   background: #eee;
 }
 
+/* Content */
+.content {
+  padding: 2em 3em;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +104,6 @@ body {
   gap: 1rem;
   padding: 2rem;
 }
-
 .card {
   background: white;
   border-radius: 8px;
@@ -88,12 +113,10 @@ body {
   max-width: 300px;
   text-align: center;
 }
-
 .card h2 {
   margin-top: 0;
   font-family: 'Rajdhani', sans-serif;
 }
-
 .card-button {
   display: inline-block;
   margin-top: 1rem;
@@ -103,93 +126,82 @@ body {
   text-decoration: none;
   border-radius: 4px;
 }
-
 .card-button:hover {
   background: #8c4a8c;
 }
 
+/* Galerie */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .gallery-grid a {
   display: block;
   overflow: hidden;
   border-radius: 8px;
 }
-
 .gallery-grid img {
   width: 100%;
+  height: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .gallery-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
+/* Lightbox */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 9999;
+}
+.lb-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lb-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+}
+.lb-caption {
+  color: #fff;
+  margin-top: .5rem;
+  text-align: center;
+  font-size: .95rem;
+}
+.lb-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,.15);
+  border: 0;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #6a3e6a;
   color: white;
 }
-
 footer a {
   color: white;
   text-decoration: underline;
-}
-
-.content {
-  padding: 2em 3em;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-label {
-  font-weight: bold;
-}
-
-input,
-textarea {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: 'Poppins', sans-serif;
-}
-
-button[type="submit"] {
-  align-self: flex-start;
-  background: #6a3e6a;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background: #8c4a8c;
-}
-
-@media (max-width: 768px) {
-  .hero-content-with-image {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .content {
-    padding: 1.5em;
-  }
 }

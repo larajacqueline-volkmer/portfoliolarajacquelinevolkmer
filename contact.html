@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Kontakt – Lara Volkmer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Kontakt – nimm direkt Verbindung mit Lara Jacqueline Volkmer auf.">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero" role="banner">
-    <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" />
-      <div>
-        <h1>Kontakt</h1>
-        <p>Sie erreichen mich per E-Mail oder über dieses Kontaktformular.</p>
-      </div>
-    </div>
+  <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
+
+  <header class="hero">
+    <h1>Kontakt</h1>
+    <p>Schreib mir eine Nachricht</p>
   </header>
 
-  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <nav class="main-nav" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
@@ -27,29 +25,34 @@
     <a href="logos.html">KI-Logos</a>
     <a href="webseiten.html">Webseiten</a>
     <a href="shop.html">Shop</a>
-    <a href="contact.html" class="active">Kontakt</a>
+    <a href="contact.html" class="active" aria-current="page">Kontakt</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="agb.html">AGB</a>
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main role="main" class="content">
-    <section aria-labelledby="kontaktformular">
-      <h2 id="kontaktformular">Kontaktformular</h2>
-      <form action="#" method="post" aria-label="Kontaktformular">
+  <main class="content" id="maincontent" tabindex="-1">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <p hidden>
+        <label>Bitte nicht ausfüllen: <input name="bot-field"></label>
+      </p>
+      <p>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
+        <input id="name" name="name" type="text" required>
+      </p>
+      <p>
         <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required />
-
+        <input id="email" name="email" type="email" required>
+      </p>
+      <p>
         <label for="message">Nachricht:</label>
         <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit" class="card-button">Absenden</button>
-      </form>
-    </section>
+      </p>
+      <p>
+        <button type="submit">Absenden</button>
+      </p>
+    </form>
   </main>
 
   <footer role="contentinfo">
