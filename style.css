@@ -1,11 +1,27 @@
-/* Basis */
-body {
+/* ==============================
+   Grundlegendes Layout & Reset
+============================== */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f7f7f7;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2c2c2c;
+  background: linear-gradient(180deg, #e7c6f3, #d9a6cf);
+  line-height: 1.6;
+}
+
+/* ==============================
+   Skip-Link (Barrierefreiheit)
+============================== */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -26,133 +42,189 @@ body {
   z-index: 10000;
 }
 
-/* Hero */
+/* ==============================
+   Hero-Bereich
+============================== */
 .hero {
-  background: linear-gradient(135deg, #c8a2c8, #e0cce0);
+  background: linear-gradient(135deg, #b78cfb, #7b4fe4);
   color: white;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 .hero-content-with-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  text-align: left;
+  gap: 1rem;
 }
 .portrait-thumbnail {
-  width: 120px;
-  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.hero-content-with-image h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-family: 'Rajdhani', sans-serif;
-}
-.hero-content-with-image p {
-  font-size: 1.2rem;
-  color: white;
-}
-.cta-button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background: white;
-  color: #6a3e6a;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.cta-button:hover {
-  background: #eee;
+  border: 3px solid #fff;
 }
 
-/* Navigation */
+/* ==============================
+   Navigation
+============================== */
 .main-nav {
-  background: #fff;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-.main-nav a {
-  display: inline-block;
-  padding: 1rem;
-  color: #6a3e6a;
-  text-decoration: none;
-  font-weight: bold;
-}
-.main-nav a:hover,
-.main-nav a.active {
-  background: #eee;
-}
-
-/* Content */
-.content {
-  padding: 2em 3em;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Cards */
-.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 2rem;
-}
-.card {
+  padding: 1rem;
   background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;
 }
-.card h2 {
-  margin-top: 0;
+.main-nav a {
   font-family: 'Rajdhani', sans-serif;
-}
-.card-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #6a3e6a;
-  color: white;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
+  color: #3a2755;
+  padding: .3rem .6rem;
+  border-radius: .3rem;
+  transition: background .3s, color .3s;
 }
-.card-button:hover {
-  background: #8c4a8c;
+.main-nav a:hover,
+.main-nav a.active {
+  background: #7b4fe4;
+  color: #fff;
 }
 
-/* Galerie */
-.gallery-grid {
+/* ==============================
+   Hauptinhalt
+============================== */
+.content {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ==============================
+   Zertifikate
+============================== */
+.certificates {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
-.gallery-grid a {
-  display: block;
+.certificates figure {
+  background: #fff;
+  border-radius: 1rem;
   overflow: hidden;
-  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform .3s;
 }
-.gallery-grid img {
+.certificates figure:hover {
+  transform: translateY(-4px);
+}
+.certificates img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+.certificates figcaption {
+  padding: .8rem;
+  font-size: .9rem;
+  text-align: center;
+  background: #f5f5f5;
 }
 
-/* Lightbox */
+/* ==============================
+   Galerie (KI-Bilder, Logos etc.)
+============================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.gallery figure {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform .3s;
+}
+.gallery figure:hover {
+  transform: scale(1.02);
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery figcaption {
+  padding: .6rem;
+  font-size: .85rem;
+  text-align: center;
+  color: #3a2755;
+}
+
+/* ==============================
+   Kontaktformular
+============================== */
+.contact-section {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.contact-section .form-group {
+  margin-bottom: 1.2rem;
+}
+.contact-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .3rem;
+}
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact-section textarea {
+  resize: vertical;
+}
+.btn-primary {
+  display: inline-block;
+  background: #7b4fe4;
+  color: white;
+  font-weight: 600;
+  padding: .8rem 1.4rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  transition: background .3s;
+}
+.btn-primary:hover {
+  background: #5a36b6;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background: #3a2755;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+footer a {
+  color: #fff;
+  margin: 0 .4rem;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #d9a6cf;
+}
+
+/* ==============================
+   Lightbox
+============================== */
 .lb-overlay {
   position: fixed;
   inset: 0;
@@ -192,16 +264,4 @@ body {
   padding: .25rem .5rem;
   border-radius: .5rem;
   cursor: pointer;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #6a3e6a;
-  color: white;
-}
-footer a {
-  color: white;
-  text-decoration: underline;
 }

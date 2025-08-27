@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Lara Volkmer</title>
-  <meta name="description" content="Kontakt – nimm direkt Verbindung mit Lara Jacqueline Volkmer auf.">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Schriften (Poppins & Rajdhani) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Theme-Farbe für Mobile-UI (optional) -->
+  <meta name="theme-color" content="#7b4fe4" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip-Link für Screenreader & Tastatur -->
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
-  <header class="hero">
-    <h1>Kontakt</h1>
-    <p>Schreib mir eine Nachricht</p>
+  <!-- Hero -->
+  <header class="hero" role="banner" aria-label="Seitenkopf Kontakt">
+    <div class="hero-content-with-image">
+      <img
+        src="images/lara-portrait.jpg"
+        alt="Portrait von Lara Jacqueline Volkmer"
+        class="portrait-thumbnail"
+        width="120" height="120"
+        fetchpriority="high" decoding="async"
+      />
+      <div>
+        <h1>Kontakt</h1>
+        <p>Schreib mir eine Nachricht</p>
+      </div>
+    </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
+  <!-- Hauptnavigation (einheitlich auf allen Seiten) -->
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
@@ -25,36 +47,58 @@
     <a href="logos.html">KI-Logos</a>
     <a href="webseiten.html">Webseiten</a>
     <a href="shop.html">Shop</a>
-    <a href="contact.html" class="active" aria-current="page">Kontakt</a>
+    <a href="contact.html" class="active">Kontakt</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="agb.html">AGB</a>
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <p hidden>
-        <label>Bitte nicht ausfüllen: <input name="bot-field"></label>
+  <!-- Inhalt -->
+  <main class="content" id="maincontent" role="main">
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="visually-hidden">Kontaktformular</h2>
+
+      <!-- kurze Intro -->
+      <p style="text-align:center; margin-bottom:1rem;">
+        Du erreichst mich per E-Mail unter
+        <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>
+        – oder bequem über dieses Kontaktformular.
       </p>
-      <p>
-        <label for="name">Name:</label>
-        <input id="name" name="name" type="text" required>
-      </p>
-      <p>
-        <label for="email">E-Mail:</label>
-        <input id="email" name="email" type="email" required>
-      </p>
-      <p>
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-      </p>
-      <p>
-        <button type="submit">Absenden</button>
-      </p>
-    </form>
+
+      <!-- Netlify-Formular -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html" aria-describedby="form-hinweis">
+        <!-- Pflicht für Netlify: form-name -->
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot gegen Spam (versteckt) -->
+        <p hidden>
+          <label>Bitte nicht ausfüllen: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail:</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Nachricht:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <p id="form-hinweis" class="visually-hidden">Alle Felder sind Pflichtfelder.</p>
+
+        <button type="submit" class="btn-primary">Absenden</button>
+      </form>
+    </section>
   </main>
 
+  <!-- Footer (einheitlich auf allen Seiten) -->
   <footer role="contentinfo">
     <p>
       <a href="impressum.html">Impressum</a> |
