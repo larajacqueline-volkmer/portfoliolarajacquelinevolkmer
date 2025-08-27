@@ -1,43 +1,37 @@
+<!-- contact.html (DROP-IN REPLACEMENT) -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontakt – Lara Volkmer</title>
 
-  <!-- Schriften (Poppins & Rajdhani) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Fonts wie auf den anderen Seiten -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Theme-Farbe für Mobile-UI (optional) -->
-  <meta name="theme-color" content="#7b4fe4" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#6a3e6a">
 </head>
 <body>
-  <!-- Skip-Link für Screenreader & Tastatur -->
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
-  <!-- Hero -->
-  <header class="hero" role="banner" aria-label="Seitenkopf Kontakt">
+  <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img
-        src="images/lara-portrait.jpg"
-        alt="Portrait von Lara Jacqueline Volkmer"
-        class="portrait-thumbnail"
-        width="120" height="120"
-        fetchpriority="high" decoding="async"
-      />
+      <img src="images/lara-portrait.jpg"
+           alt="Portrait von Lara Jacqueline Volkmer"
+           class="portrait-thumbnail"
+           width="120" height="120"
+           fetchpriority="high" decoding="async">
       <div>
         <h1>Kontakt</h1>
-        <p>Schreib mir eine Nachricht</p>
+        <p>Schreiben Sie mir eine Nachricht.</p>
+        <a href="mailto:volkmer.lara@gmail.com" class="cta-button">E-Mail schreiben</a>
       </div>
     </div>
   </header>
 
-  <!-- Hauptnavigation (einheitlich auf allen Seiten) -->
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
@@ -50,55 +44,63 @@
     <a href="contact.html" class="active">Kontakt</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
-    <a href="agb.html">AGB</a>
-    <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <!-- Inhalt -->
-  <main class="content" id="maincontent" role="main">
-    <section class="contact-section" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="visually-hidden">Kontaktformular</h2>
-
-      <!-- kurze Intro -->
-      <p style="text-align:center; margin-bottom:1rem;">
-        Du erreichst mich per E-Mail unter
-        <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>
-        – oder bequem über dieses Kontaktformular.
-      </p>
-
-      <!-- Netlify-Formular -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html" aria-describedby="form-hinweis">
-        <!-- Pflicht für Netlify: form-name -->
-        <input type="hidden" name="form-name" value="contact" />
-
-        <!-- Honeypot gegen Spam (versteckt) -->
-        <p hidden>
-          <label>Bitte nicht ausfüllen: <input name="bot-field" /></label>
+  <main class="content" id="maincontent">
+    <section class="contact-section" aria-labelledby="kontakt-h">
+      <div class="contact-card">
+        <h2 id="kontakt-h" class="contact-intro-h">Kontakt aufnehmen</h2>
+        <p class="contact-intro">
+          Sie erreichen mich per E-Mail unter
+          <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>
+          oder bequem über dieses Kontaktformular.
         </p>
 
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" autocomplete="name" required />
-        </div>
+        <!-- Netlify Formular -->
+        <form name="kontakt"
+              method="POST"
+              action="/thanks.html"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="contact-form"
+              aria-describedby="contact-hinweis">
 
-        <div class="form-group">
-          <label for="email">E-Mail:</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-        </div>
+          <!-- Honeypot (unsichtbar für Menschen) -->
+          <p class="sr-only">
+            <label>Bitte nicht ausfüllen:
+              <input name="bot-field" />
+            </label>
+          </p>
 
-        <div class="form-group">
-          <label for="message">Nachricht:</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
+          <!-- Netlify benötigt dieses versteckte Feld -->
+          <input type="hidden" name="form-name" value="kontakt" />
 
-        <p id="form-hinweis" class="visually-hidden">Alle Felder sind Pflichtfelder.</p>
+          <div class="contact-grid">
+            <div class="form-group">
+              <label for="name">Ihr Name</label>
+              <input id="name" name="name" type="text" class="input" autocomplete="name" required />
+            </div>
 
-        <button type="submit" class="btn-primary">Absenden</button>
-      </form>
+            <div class="form-group">
+              <label for="email">Ihre E-Mail</label>
+              <input id="email" name="email" type="email" class="input" autocomplete="email" required />
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Ihre Nachricht</label>
+              <textarea id="message" name="message" class="textarea" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Absenden</button>
+            <span id="contact-hinweis" class="form-hint">Ich antworte in der Regel innerhalb von 1–2 Werktagen.</span>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <!-- Footer (einheitlich auf allen Seiten) -->
   <footer role="contentinfo">
     <p>
       <a href="impressum.html">Impressum</a> |
