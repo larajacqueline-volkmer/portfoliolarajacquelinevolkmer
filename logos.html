@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KI-Logos – Lara Volkmer</title>
-  <meta name="description" content="Logo-Designs von Lara Jacqueline Volkmer – individuell, kreativ und KI-unterstützt.">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
-  <header class="hero">
-    <h1>KI-Logos</h1>
-    <p>Kreative Logo-Designs</p>
+  <header class="hero" role="banner">
+    <div class="hero-content-with-image">
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer"
+           class="portrait-thumbnail" width="120" height="120" fetchpriority="high" decoding="async">
+      <div>
+        <h1>KI-Logos</h1>
+        <p>Brand-Ideen zwischen Neon, Minimal und Futurismus</p>
+      </div>
+    </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
     <a href="bilder.html">KI-Bilder</a>
-    <a href="logos.html" class="active" aria-current="page">KI-Logos</a>
+    <a href="logos.html" class="active">KI-Logos</a>
     <a href="webseiten.html">Webseiten</a>
     <a href="shop.html">Shop</a>
     <a href="contact.html">Kontakt</a>
@@ -32,23 +41,24 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
-    <section class="gallery">
-      <figure>
-        <img src="images/logo-1.jpg" alt="Logo Design mit Initialen LJV in Neon-Stil" width="400" height="400" loading="lazy">
-        <figcaption>LJV Initialen im Neon-Stil</figcaption>
+  <main id="maincontent" class="container">
+    <section class="gallery-grid">
+      <figure class="gallery-card gallery-card--logo">
+        <img src="images/logo-1.jpg" alt="Logo-Konzept 1"
+             width="1000" height="1000" loading="lazy" decoding="async">
+        <figcaption>Logo-Konzept 1</figcaption>
       </figure>
-      <figure>
-        <img src="images/logo-2.jpg" alt="Futuristisches Logo mit geometrischen Formen" width="400" height="400" loading="lazy">
-        <figcaption>Geometrisches Logo</figcaption>
+
+      <figure class="gallery-card gallery-card--logo">
+        <img src="images/logo-2.jpg" alt="Logo-Konzept 2"
+             width="1000" height="1000" loading="lazy" decoding="async">
+        <figcaption>Logo-Konzept 2</figcaption>
       </figure>
-      <figure>
-        <img src="images/logo-3.jpg" alt="Modernes Monogramm-Logo MP in Cyber-Stil" width="400" height="400" loading="lazy">
-        <figcaption>Monogramm im Cyber-Stil</figcaption>
-      </figure>
-      <figure>
-        <img src="images/logo-4.jpg" alt="Logo mit Schriftzug LJV in Pastellfarben" width="400" height="400" loading="lazy">
-        <figcaption>LJV Schriftzug Pastell</figcaption>
+
+      <figure class="gallery-card gallery-card--logo">
+        <img src="images/logo-3.jpg" alt="Logo-Konzept 3"
+             width="1000" height="1000" loading="lazy" decoding="async">
+        <figcaption>Logo-Konzept 3</figcaption>
       </figure>
     </section>
   </main>

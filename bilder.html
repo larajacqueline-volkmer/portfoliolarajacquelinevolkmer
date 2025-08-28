@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KI-Bilder – Lara Volkmer</title>
-  <meta name="description" content="KI-generierte Artworks von Lara Jacqueline Volkmer – Cyberpunk, Neon, futuristische Illustrationen.">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
-  <header class="hero">
-    <h1>KI-Bilder</h1>
-    <p>Eine Auswahl meiner KI-generierten Illustrationen</p>
+  <header class="hero" role="banner">
+    <div class="hero-content-with-image">
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer"
+           class="portrait-thumbnail" width="120" height="120" fetchpriority="high" decoding="async">
+      <div>
+        <h1>KI-Bilder</h1>
+        <p>Eine Auswahl meiner KI-generierten Illustrationen</p>
+      </div>
+    </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
-    <a href="bilder.html" class="active" aria-current="page">KI-Bilder</a>
+    <a href="bilder.html" class="active">KI-Bilder</a>
     <a href="logos.html">KI-Logos</a>
     <a href="webseiten.html">Webseiten</a>
     <a href="shop.html">Shop</a>
@@ -33,43 +41,43 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
-    <section class="gallery">
-      <figure>
-        <a href="images/ki-artwork1.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork1.jpg" alt="Futuristisches KI-Artwork in Neonfarben" width="800" height="600" loading="lazy">
-        </a>
+  <main id="maincontent" class="container">
+    <section class="gallery-grid">
+      <!-- Beispielkarten – verwende deine vorhandenen Dateinamen -->
+      <figure class="gallery-card">
+        <img src="images/ki-artwork1.jpg" alt="Futuristische KI-Illustration mit Neonfarben"
+             width="1200" height="800" loading="lazy" decoding="async">
         <figcaption>Futuristische KI-Illustration mit Neonfarben</figcaption>
       </figure>
-      <figure>
-        <a href="images/ki-artwork2.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork2.jpg" alt="Cyberpunk-Szene mit weiblichem Charakter" width="800" height="600" loading="lazy">
-        </a>
-        <figcaption>Cyberpunk-Szene in violettem Licht</figcaption>
+
+      <figure class="gallery-card">
+        <img src="images/ki-artwork2.jpg" alt="Cyberpunk-Auge in extremer Nahaufnahme"
+             width="1200" height="800" loading="lazy" decoding="async">
+        <figcaption>Cyberpunk-Auge – Detailstudie</figcaption>
       </figure>
-      <figure>
-        <a href="images/ki-artwork3.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork3.jpg" alt="Frau in digitalem Dschungel mit Tech-Accessoires" width="800" height="600" loading="lazy">
-        </a>
-        <figcaption>Digitale Figur im futuristischen Setting</figcaption>
+
+      <figure class="gallery-card">
+        <img src="images/ki-artwork3.jpg" alt="Neon-Porträt, zarte Pastelltöne"
+             width="1200" height="1500" loading="lazy" decoding="async">
+        <figcaption>Neon-Porträt in Pastell</figcaption>
       </figure>
-      <figure>
-        <a href="images/ki-artwork4.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork4.jpg" alt="Stilisiertes Zukunftsportrait in pink-violettem Design" width="800" height="600" loading="lazy">
-        </a>
-        <figcaption>Stilisiertes Portrait in Pink-Violett</figcaption>
+
+      <figure class="gallery-card">
+        <img src="images/ki-artwork4.jpg" alt="Stilisiertes Zukunftsporträt in pink-violettem Setting"
+             width="1200" height="1500" loading="lazy" decoding="async">
+        <figcaption>Zukunftsporträt – Pink/Violett</figcaption>
       </figure>
-      <figure>
-        <a href="images/ki-artwork5.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork5.jpg" alt="Herzförmiges Cyberpunk-Artwork mit Neonlicht" width="800" height="600" loading="lazy">
-        </a>
-        <figcaption>Cyberpunk-Herz in Neonfarben</figcaption>
+
+      <figure class="gallery-card">
+        <img src="images/ki-artwork5.jpg" alt="Herz-Hologramm mit Glitch-Effekt"
+             width="1200" height="1200" loading="lazy" decoding="async">
+        <figcaption>Herz-Hologramm</figcaption>
       </figure>
-      <figure>
-        <a href="images/ki-artwork6.jpg" data-lightbox="gal">
-          <img src="images/ki-artwork6.jpg" alt="Futuristischer Fischroboter in leuchtendem Wasser" width="800" height="600" loading="lazy">
-        </a>
-        <figcaption>Roboter-Fisch in Neon-Optik</figcaption>
+
+      <figure class="gallery-card">
+        <img src="images/ki-artwork6.jpg" alt="Futuristischer Oktopus in 3D-Optik"
+             width="1200" height="900" loading="lazy" decoding="async">
+        <figcaption>3D-Oktopus</figcaption>
       </figure>
     </section>
   </main>
