@@ -1,30 +1,33 @@
+<!-- ===== services.html (erweitert, ohne Buttons) ===== -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Leistungen – Lara Volkmer</title>
-  <meta name="description" content="Leistungen von Lara Jacqueline Volkmer – KI-Illustrationen, Logo-Design, Webseiten, kreative Tech-Projekte.">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leistungen – Lara Jacqueline Volkmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#6f4bb8">
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-
-  <header class="hero">
-    <h1>Leistungen</h1>
-    <p>Kreativität trifft Technologie</p>
+  <header class="hero" role="banner">
+    <div class="hero-content-with-image">
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120">
+      <h1>Leistungen</h1>
+      <p class="subtitle">Design, Medien &amp; KI – aus einer Hand.</p>
+    </div>
   </header>
 
-  <nav class="main-nav" aria-label="Hauptnavigation">
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
-    <a href="services.html" class="active" aria-current="page">Leistungen</a>
+    <a href="services.html" class="active">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
     <a href="bilder.html">KI-Bilder</a>
     <a href="logos.html">KI-Logos</a>
-    <a href="webseiten.html">Webseiten</a>
-    <a href="shop.html">Shop</a>
     <a href="contact.html">Kontakt</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
@@ -32,33 +35,38 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main class="content" id="maincontent" tabindex="-1">
+  <main id="maincontent" class="content">
     <section class="cards">
       <div class="card">
         <h2>KI-Bilder</h2>
-        <p>Individuelle Illustrationen mit KI nach Wunsch.</p>
-        <a href="bilder.html" class="card-button">Beispiele ansehen</a>
+        <p>Konzept, Prompt-Design &amp; Feinschliff. Stile von futuristisch-neon bis pastell-soft.</p>
       </div>
       <div class="card">
-        <h2>Logos</h2>
-        <p>Einzigartige Logo-Designs für deine Marke.</p>
-        <a href="logos.html" class="card-button">Logos ansehen</a>
+        <h2>Logo-Design</h2>
+        <p>Individuelle Markenzeichen inkl. Mini-Styleguide (Farben, Typo, Anwendung).</p>
       </div>
       <div class="card">
         <h2>Webseiten</h2>
-        <p>Von modern bis retro: Webseiten nach Maß.</p>
-        <a href="webseiten.html" class="card-button">Webseiten ansehen</a>
+        <p>Statische Sites, Portfolios &amp; Landingpages – schnell, zugänglich, klar strukturiert.</p>
+      </div>
+      <div class="card">
+        <h2>Songs</h2>
+        <p>Kurzjingles, Hooks &amp; komplette Stücke – für Intros, Clips oder Social Media.</p>
+      </div>
+      <div class="card">
+        <h2>Videos</h2>
+        <p>Short-Form-Videos (Storyboard, Schnitt, Motion-Titel). Auf Wunsch KI-Voice.</p>
+      </div>
+      <div class="card">
+        <h2>Vordrucke &amp; Formulierungen</h2>
+        <p>Präzise Text-Bausteine – z.&nbsp;B. Kündigungsschreiben, Anfragen, Social-Captions,
+           oder gern auch humorvoll: Beschwerde-E-Mails an Fabelwesen.</p>
       </div>
     </section>
   </main>
 
   <footer role="contentinfo">
-    <p>
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a> |
-      <a href="agb.html">AGB</a> |
-      <a href="widerruf.html">Widerruf</a>
-    </p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
 </body>

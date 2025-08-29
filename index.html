@@ -1,34 +1,24 @@
+<!-- ===== index.html ===== -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio – Lara Volkmer</title>
-
-  <!-- Webfonts (wie vereinbart) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Lara Jacqueline Volkmer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
-  <meta name="theme-color" content="#6a3e6a">
+  <meta name="theme-color" content="#6f4bb8">
 </head>
 <body>
-  <!-- Skip-Link: per CSS unsichtbar, nur im Fokus sichtbar -->
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-
-  <header class="hero" role="banner" aria-label="Seitentitel und Intro">
+  <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg"
-           alt="Portrait von Lara Jacqueline Volkmer"
-           class="portrait-thumbnail"
-           width="120" height="120"
-           fetchpriority="high" decoding="async" />
-      <div>
-        <h1>Lara Jacqueline Volkmer</h1>
-        <p>Medieninformatik &amp; KI-Kunst in moderner Ästhetik</p>
-        <a href="contact.html" class="cta-button" aria-label="Kontakt aufnehmen">Kontakt aufnehmen</a>
-      </div>
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120" fetchpriority="high" decoding="async">
+      <h1>Lara Jacqueline Volkmer</h1>
+      <p class="subtitle">Medieninformatik &amp; KI-Kunst in moderner Ästhetik</p>
+      <a href="contact.html" class="cta-button">Kontakt aufnehmen</a>
     </div>
   </header>
 
@@ -39,8 +29,6 @@
     <a href="zertifikate.html">Zertifikate</a>
     <a href="bilder.html">KI-Bilder</a>
     <a href="logos.html">KI-Logos</a>
-    <a href="webseiten.html">Webseiten</a>
-    <a href="shop.html">Shop</a>
     <a href="contact.html">Kontakt</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
@@ -48,33 +36,25 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-  <main id="maincontent">
+  <main id="maincontent" class="content">
     <section class="cards">
       <div class="card">
         <h2>Individuelle Illustrationen</h2>
         <p>KI-generierte Artworks nach Ihren Vorstellungen.</p>
-        <a href="bilder.html" class="card-button">Beispiele ansehen</a>
       </div>
       <div class="card">
         <h2>Logo-Design</h2>
-        <p>Einzigartige Logos für Ihr Branding.</p>
-        <a href="logos.html" class="card-button">Logos ansehen</a>
+        <p>Einzigartige Logos für klares Branding.</p>
       </div>
       <div class="card">
-        <h2>Webseiten</h2>
-        <p>Moderne oder nostalgische Weblösungen.</p>
-        <a href="webseiten.html" class="card-button">Projekte ansehen</a>
+        <h2>Creative Media</h2>
+        <p>Webseiten, Songs, Videos &amp; präzise Formulierungsvordrucke.</p>
       </div>
     </section>
   </main>
 
   <footer role="contentinfo">
-    <p>
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a> |
-      <a href="agb.html">AGB</a> |
-      <a href="widerruf.html">Widerruf</a>
-    </p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
 </body>

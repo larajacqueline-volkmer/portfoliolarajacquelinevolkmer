@@ -1,53 +1,32 @@
+<!-- ===== 404.html ===== -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seite nicht gefunden – 404</title>
-  <meta name="robots" content="noindex,follow">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" /><meta name="theme-color" content="#6f4bb8"><meta name="robots" content="noindex">
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-
-  <header class="hero">
-    <h1>404 – Seite nicht gefunden</h1>
-    <p>Ups! Diese Seite gibt es hier nicht.</p>
+  <header class="hero" role="banner">
+    <div class="hero-content-with-image">
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120">
+      <h1>404 – Seite nicht gefunden</h1>
+      <p class="subtitle">Die gewünschte Seite existiert nicht.</p>
+    </div>
   </header>
-
-  <nav class="main-nav" aria-label="Hauptnavigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">Über mich</a>
-    <a href="services.html">Leistungen</a>
-    <a href="zertifikate.html">Zertifikate</a>
-    <a href="bilder.html">KI-Bilder</a>
-    <a href="logos.html">KI-Logos</a>
-    <a href="webseiten.html">Webseiten</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="agb.html">AGB</a>
-    <a href="widerruf.html">Widerruf</a>
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="active">Home</a><a href="about.html">Über mich</a><a href="services.html">Leistungen</a>
+    <a href="zertifikate.html">Zertifikate</a><a href="bilder.html">KI-Bilder</a><a href="logos.html">KI-Logos</a>
+    <a href="contact.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a>
   </nav>
-
-  <main class="content" id="maincontent" tabindex="-1">
-    <p>Vielleicht suchst du eine der folgenden Seiten:</p>
-    <ul>
-      <li><a href="index.html">Zur Startseite</a></li>
-      <li><a href="about.html">Über mich</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-    </ul>
+  <main id="maincontent" class="content">
+    <section class="container"><p><a class="cta-button" href="index.html">Zur Startseite</a></p></section>
   </main>
-
   <footer role="contentinfo">
-    <p>
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a> |
-      <a href="agb.html">AGB</a> |
-      <a href="widerruf.html">Widerruf</a>
-    </p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
 </body>

@@ -1,174 +1,84 @@
-/* ===========================
-   Design-Variablen
-=========================== */
+/* ===== style.css (komplett) ===== */
 :root{
-  --bg:#f5f2f7;
-  --surface:#ffffff;
-  --text:#2a2333;
-  --muted:#6e5a83;
-  --primary:#6f4bb8;      /* Lila */
-  --primary-700:#5c3ca1;
-  --accent:#b084f7;
-  --hero-from:#e6d6ef;
-  --hero-to:#ceb3e8;
-  --shadow:0 6px 18px rgba(0,0,0,.08);
-  --radius:14px;
+  --brand:#6f4bb8; --brand-2:#8c6be3;
+  --hero-from:#e6d6ef; --hero-to:#ceb3e8;
+  --bg:#f5f2f7; --surface:#fff; --text:#2a2333; --muted:#6d5d7f; --border:#e6e0ee;
+  --radius:14px; --shadow:0 8px 28px rgba(23,16,36,.12);
 }
-
-/* ===========================
-   Reset & Grundlayout
-=========================== */
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
-  color:var(--text);
+  margin:0;background:var(--bg);color:var(--text);line-height:1.6;
   font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
-  line-height:1.55;
 }
+h1,h2,h3{font-family:"Rajdhani",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.15;margin:0 0 .25rem}
+h1{font-size:clamp(1.8rem,2.7vw,2.6rem);font-weight:700}
+h2{font-size:clamp(1.4rem,2vw,1.8rem);font-weight:700}
+p{margin:.5rem 0 0;color:var(--muted)}
+a{color:var(--brand);text-decoration:underline transparent}
+a:hover{text-decoration-color:var(--brand)}
+img{max-width:100%;height:auto;display:block}
 
-/* Typografie */
-h1,h2,h3,h4{
-  font-family:"Rajdhani","Poppins",Arial,sans-serif;
-  line-height:1.2;margin:0 0 .5rem 0;color:var(--text)
-}
-h1{font-size:clamp(1.75rem,2.6vw,2.6rem);font-weight:700}
-h2{font-size:clamp(1.35rem,2vw,2rem);font-weight:700}
-h3{font-size:1.15rem;font-weight:700}
+/* Skip-Link */
+.skip-link{position:absolute;left:-9999px;top:auto;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem;z-index:10000}
 
-p{margin:.5rem 0 1rem 0}
-a{color:var(--primary);text-decoration:underline transparent;transition:text-decoration-color .2s ease}
-a:hover,a:focus{text-decoration-color:var(--primary)}
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--hero-from),var(--hero-to));padding:48px 16px;margin:0 0 16px}
+.hero .hero-content-with-image{
+  max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center
+}
+.portrait-thumbnail{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:var(--shadow)}
+.subtitle{margin-top:2px}
+.cta-button{display:inline-flex;align-items:center;justify-content:center;padding:.7rem 1.05rem;border-radius:12px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;margin-top:.35rem;box-shadow:var(--shadow)}
+.cta-button:hover{filter:brightness(1.06)}
 
-/* Buttons */
-button,.cta-button,.card-button{
-  appearance:none;border:0;cursor:pointer;
-  background:var(--primary);color:#fff;
-  padding:.7rem 1rem;border-radius:12px;
-  font-weight:700;box-shadow:var(--shadow);
-}
-button:hover,.cta-button:hover,.card-button:hover{background:var(--primary-700)}
-
-/* Accessibility Helfer */
-.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-.skip-link{
-  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-}
-.skip-link:focus{
-  left:1rem;top:1rem;width:auto;height:auto;
-  background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem;z-index:10000
-}
-
-/* Container & Sektionen */
-.container{max-width:1100px;margin:0 auto;padding:0 1rem}
-.section{padding:2rem 0}
-
-/* ===========================
-   Hero
-=========================== */
-.hero{
-  background:linear-gradient(135deg,var(--hero-from),var(--hero-to));
-  padding:2.25rem 1rem;margin:0 0 1rem 0;
-  box-shadow:var(--shadow)
-}
-.hero-content-with-image{
-  max-width:1100px;margin:0 auto;
-  display:flex;gap:1rem;align-items:center
-}
-.portrait-thumbnail{
-  width:120px;height:120px;border-radius:50%;
-  object-fit:cover;flex:0 0 auto;border:3px solid #fff;
-  box-shadow:0 4px 12px rgba(0,0,0,.15)
-}
-
-/* ===========================
-   Navigation
-=========================== */
+/* Navigation */
 .main-nav{
-  display:flex;flex-wrap:wrap;gap:.6rem .8rem;
-  justify-content:center;align-items:center;
-  background:var(--surface);padding:.75rem 1rem;margin:0 auto 1.25rem;
-  box-shadow:var(--shadow)
+  max-width:1100px;margin:0 auto 18px;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;padding:0 12px
 }
 .main-nav a{
-  text-decoration:none;color:var(--text);
-  font-weight:700;border-radius:12px;padding:.55rem .8rem;
-  background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04)
+  background:var(--surface);color:var(--text);border-radius:12px;padding:.55rem .8rem;text-decoration:none;font-weight:700;border:1px solid var(--border)
 }
-.main-nav a:hover,.main-nav a:focus{outline:none;background:#f0e9fb}
-.main-nav a.active{background:var(--primary);color:#fff}
+.main-nav a:hover{box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.main-nav a.active{background:var(--brand);color:#fff}
 
-/* ===========================
-   Karten / Startseite
-=========================== */
-.cards{
-  display:grid;gap:1rem;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  padding:0 1rem;max-width:1100px;margin:0 auto 2rem
-}
-.card{
-  background:var(--surface);border-radius:var(--radius);padding:1rem;
-  box-shadow:var(--shadow)
-}
-.card h2{margin-top:.25rem}
+/* Layout-Container */
+.content,.container,.cards,.gallery-grid{max-width:1100px;margin:0 auto;padding:0 12px}
+main{padding-bottom:28px}
+#maincontent{display:block}
 
-/* ===========================
-   Galerie (Bilder & Logos)
-=========================== */
-.gallery-grid{
-  display:grid;gap:1rem;margin:0 auto 2rem;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
-.gallery-card{
-  background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)
-}
-.gallery-card img{display:block;width:100%;height:auto}
-.gallery-card figcaption{
-  padding:.75rem 1rem;font-size:.95rem;font-weight:600
-}
-.gallery-card--logo img{aspect-ratio:1/1;object-fit:cover}
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surface);padding:16px;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow)}
+.card h3,.card h2{margin-top:.25rem}
 
-/* ===========================
-   Kontaktformular
-=========================== */
-.contact{margin-top:1rem}
-.form-grid{
-  display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))
-}
-.form-field label{display:block;font-weight:700;margin:.25rem 0 .35rem}
-.form-field input,.form-field textarea{
-  width:100%;padding:.7rem .8rem;border:1px solid #d8cfe8;border-radius:10px;
-  background:#fff;font:inherit
-}
-.form-field textarea{min-height:140px;resize:vertical}
-.form-field--full{grid-column:1/-1}
-.form-note{margin:.5rem 0 0 0;font-size:.95rem;color:#555}
+/* Galerie */
+.gallery-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.gallery-grid figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.gallery-grid figcaption{padding:.6rem .75rem;color:var(--muted)}
 
-@media (max-width:720px){
-  .form-grid{grid-template-columns:1fr}
-}
+/* Formular */
+.form-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+.form-row{display:flex;flex-direction:column;gap:.6rem;margin:.8rem 0}
+label{font-weight:600}
+input,textarea{width:100%;font:inherit;padding:.6rem .7rem;border-radius:10px;border:1px solid var(--border);background:#fff}
+textarea{min-height:140px;resize:vertical}
+button[type="submit"]{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.65rem 1rem;font-weight:700;cursor:pointer}
 
-/* ===========================
-   Footer
-=========================== */
-footer{
-  background:var(--primary);color:#fff;text-align:center;margin-top:2rem;
-  padding:1.25rem
-}
-footer a{color:#fff;text-decoration:underline transparent}
-footer a:hover{opacity:.9;text-decoration-color:#fff}
+/* Footer */
+footer{background:#5a367e;color:#fff;margin-top:28px;padding:18px 12px;text-align:center}
+footer a{color:#fff;text-underline-offset:3px}
+footer p{color:#fff;margin:.35rem 0}
 
-/* ===========================
-   Medien
-=========================== */
-img{max-width:100%;height:auto}
+/* Lightbox (falls später genutzt) */
+.lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:9999}
+.lb-overlay.open{opacity:1;pointer-events:auto}
+.lb-img{max-width:92vw;max-height:82vh}
+.lb-caption{color:#fff;margin-top:.5rem;text-align:center}
+.lb-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.15);border:0;color:#fff;font-size:2rem;line-height:1;padding:.25rem .5rem;border-radius:.5rem;cursor:pointer}
 
-/* ===========================
-   Kleinere Responsive Tweaks
-=========================== */
-@media (max-width:560px){
-  .portrait-thumbnail{width:96px;height:96px}
-  .main-nav{gap:.45rem .5rem}
-  .main-nav a{padding:.5rem .7rem}
+@media (min-width:900px){
+  .hero{padding:56px 16px}
+  .portrait-thumbnail{width:130px;height:130px}
 }

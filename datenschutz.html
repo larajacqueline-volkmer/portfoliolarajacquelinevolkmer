@@ -1,58 +1,45 @@
+<!-- ===== datenschutz.html ===== -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Datenschutz – Lara Volkmer</title>
-  <meta name="description" content="Datenschutzhinweise gemäß DSGVO.">
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutzerklärung – Lara Jacqueline Volkmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" /><meta name="theme-color" content="#6f4bb8">
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer"
-           class="portrait-thumbnail" width="120" height="120" fetchpriority="high" decoding="async">
-      <div>
-        <h1>Datenschutz</h1>
-        <p>Informationen gemäß DSGVO</p>
-      </div>
+      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120">
+      <h1>Datenschutz</h1>
+      <p class="subtitle">Informationen gemäß DSGVO</p>
     </div>
   </header>
-  <nav class="main-nav" aria-label="Hauptnavigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">Über mich</a>
-    <a href="services.html">Leistungen</a>
-    <a href="zertifikate.html">Zertifikate</a>
-    <a href="bilder.html">KI-Bilder</a>
-    <a href="logos.html">KI-Logos</a>
-    <a href="webseiten.html">Webseiten</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html" class="active" aria-current="page">Datenschutz</a>
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html">Home</a><a href="about.html">Über mich</a><a href="services.html">Leistungen</a>
+    <a href="zertifikate.html">Zertifikate</a><a href="bilder.html">KI-Bilder</a><a href="logos.html">KI-Logos</a>
+    <a href="contact.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html" class="active">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a>
   </nav>
-  <main class="content" id="maincontent">
-    <article>
+  <main id="maincontent" class="content">
+    <section class="container">
       <h2>1. Verantwortliche</h2>
-      <p>Lara Jacqueline Volkmer, Aachener Straße 26, 52146 Würselen · <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a></p>
-      <h2>2. Zwecke & Rechtsgrundlagen</h2>
-      <ul>
-        <li>Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO)</li>
-        <li>Kontaktanfragen (Art. 6 Abs. 1 lit. b DSGVO)</li>
-      </ul>
-      <h2>3. Rechte</h2>
-      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch.</p>
-      <h2>4. Stand</h2>
-      <p>27.08.2025</p>
-    </article>
+      <p>Lara Jacqueline Volkmer, Aachener Straße 26, 52146 Würselen, Deutschland. E-Mail: <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a></p>
+      <h2>2. Verarbeitete Daten</h2>
+      <p>Beim Aufruf der Website: IP-Adresse, Datum/Uhrzeit, Browser-Infos (Server-Logfiles). Beim Kontaktformular: Name, E-Mail, Nachricht (zwecks Bearbeitung Ihrer Anfrage). Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.</p>
+      <h2>3. Hosting &amp; Netlify</h2>
+      <p>Hosting durch Netlify, Inc. Es können serverseitig Logs entstehen. Infos: netlify.com/privacy.</p>
+      <h2>4. Speicherdauer</h2>
+      <p>Kontaktanfragen werden so lange gespeichert, wie es zur Bearbeitung erforderlich ist bzw. gesetzliche Aufbewahrungsfristen bestehen.</p>
+      <h2>5. Ihre Rechte</h2>
+      <p>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch. Beschwerden an die zuständige Datenschutzaufsicht.</p>
+      <h2>6. Sicherheit</h2>
+      <p>Die Übertragung erfolgt TLS-verschlüsselt (HTTPS).</p>
+    </section>
   </main>
   <footer role="contentinfo">
-    <p>
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html" aria-current="page">Datenschutz</a> |
-      <a href="agb.html">AGB</a> |
-      <a href="widerruf.html">Widerruf</a>
-    </p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
 </body>
