@@ -1,48 +1,119 @@
-<!-- ===== contact.html ===== -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kontakt – Lara Jacqueline Volkmer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts (final) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" /><meta name="theme-color" content="#6f4bb8">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Meta -->
+  <meta name="description" content="Schreib mir eine Nachricht – ich antworte in der Regel innerhalb von 1–2 Werktagen." />
+  <meta name="theme-color" content="#6b3fa0">
+
+  <!-- GoatCounter -->
+  <script data-goatcounter="https://ljv.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <noscript><img src="https://ljv.goatcounter.com/count?p=/contact.html" alt="" /></noscript>
 </head>
 <body>
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
+
+  <!-- Header / Hero -->
   <header class="hero" role="banner">
     <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120">
-      <h1>Kontakt</h1>
-      <p class="subtitle">Schreib mir eine Nachricht</p>
+      <img
+        src="images/lara-portrait.jpg"
+        alt="Portrait von Lara Jacqueline Volkmer"
+        class="portrait-thumbnail"
+        width="120" height="120"
+        fetchpriority="high" decoding="async"
+      />
+      <div>
+        <h1>Kontakt</h1>
+        <p>Schreib mir eine Nachricht – ich antworte in der Regel innerhalb von 1–2 Werktagen.</p>
+      </div>
     </div>
+
+    <!-- Hauptnavigation (final, ohne Shop/Webseiten) -->
+    <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über mich</a>
+      <a href="services.html">Leistungen</a>
+      <a href="zertifikate.html">Zertifikate</a>
+      <a href="bilder.html">KI-Bilder</a>
+      <a href="logos.html">KI-Logos</a>
+      <a aria-current="page" href="contact.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+      <a href="widerruf.html">Widerruf</a>
+    </nav>
   </header>
-  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
-    <a href="index.html">Home</a><a href="about.html">Über mich</a><a href="services.html">Leistungen</a>
-    <a href="zertifikate.html">Zertifikate</a><a href="bilder.html">KI-Bilder</a><a href="logos.html">KI-Logos</a>
-    <a href="contact.html" class="active">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a>
-  </nav>
-  <main id="maincontent" class="content">
-    <section class="container">
-      <h2>Kontakt aufnehmen</h2>
-      <p>Sie erreichen mich per E-Mail unter <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a> oder bequem über dieses Kontaktformular.</p>
-      <form class="form-wrap" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
-        <p hidden><label>Bitte nicht ausfüllen: <input name="bot-field"></label></p>
-        <input type="hidden" name="form-name" value="kontakt" />
-        <div class="form-row"><label for="name">Ihr Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div class="form-row"><label for="email">Ihre E-Mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="form-row"><label for="message">Ihre Nachricht</label><textarea id="message" name="message" required></textarea></div>
-        <button type="submit">Absenden</button>
-        <p class="hint">Ich antworte in der Regel innerhalb von 1–2 Werktagen.</p>
+
+  <!-- Inhalt -->
+  <main id="maincontent" class="content" role="main">
+    <section aria-labelledby="kontakt-headline">
+      <h2 id="kontakt-headline">Kontakt aufnehmen</h2>
+      <p>Am schnellsten per E-Mail an
+        <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>
+        – oder bequem über dieses Formular:
+      </p>
+
+      <!-- Netlify-Form: final -->
+      <form
+        name="Kontakt"
+        method="POST"
+        action="thanks.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        aria-describedby="antwort-hinweis"
+        class="contact-form"
+      >
+        <!-- Honeypot gegen Spam -->
+        <p hidden>
+          <label>Bitte nicht ausfüllen:
+            <input name="bot-field" />
+          </label>
+        </p>
+        <!-- Netlify braucht den Namen zusätzlich als Hidden -->
+        <input type="hidden" name="form-name" value="Kontakt" />
+
+        <div class="form-row">
+          <label for="name">Ihr Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Ihre E-Mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Absenden</button>
+        <p id="antwort-hinweis" class="form-hint">Ich antworte in der Regel innerhalb von 1–2 Werktagen.</p>
       </form>
     </section>
   </main>
+
+  <!-- Footer (einheitlich) -->
   <footer role="contentinfo">
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
+    <p>
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a> |
+      <a href="agb.html">AGB</a> |
+      <a href="widerruf.html">Widerruf</a>
+    </p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
-<script data-goatcounter="https://ljv.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-<noscript><img src="https://ljv.goatcounter.com/count?p=/noscript" alt=""></noscript>
 </body>
 </html>
