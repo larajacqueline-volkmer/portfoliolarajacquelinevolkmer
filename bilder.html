@@ -1,43 +1,155 @@
-<!-- ===== bilder.html ===== -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KI-Bilder – Lara Jacqueline Volkmer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" /><meta name="theme-color" content="#6f4bb8">
+
+  <!-- Google Fonts wie auf den anderen Seiten -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Auswahl meiner KI-generierten Illustrationen.">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-bilder">
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-  <header class="hero" role="banner">
-    <div class="hero-content-with-image">
-      <img src="images/lara-portrait.jpg" alt="Portrait von Lara Jacqueline Volkmer" class="portrait-thumbnail" width="120" height="120">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img
+        src="images/lara-portrait.jpg"
+        alt="Portrait von Lara Jacqueline Volkmer"
+        class="portrait-thumbnail"
+        width="120" height="120"
+        fetchpriority="high" decoding="async">
       <h1>KI-Bilder</h1>
       <p class="subtitle">Eine Auswahl meiner KI-generierten Illustrationen</p>
     </div>
   </header>
+
+  <!-- Navigation unter dem Banner (wie auf den anderen Seiten) -->
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
-    <a href="index.html">Home</a><a href="about.html">Über mich</a><a href="services.html">Leistungen</a>
-    <a href="zertifikate.html">Zertifikate</a><a href="bilder.html" class="active">KI-Bilder</a><a href="logos.html">KI-Logos</a>
-    <a href="contact.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">Über mich</a>
+    <a href="services.html">Leistungen</a>
+    <a href="index.html">Home</a>
+    <a href="zertifikate.html">Zertifikate</a>
+    <a href="bilder.html" class="active">KI-Bilder</a>
+    <a href="logos.html">KI-Logos</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="agb.html">AGB</a>
+    <a href="widerruf.html">Widerruf</a>
   </nav>
+
   <main id="maincontent" class="content">
-    <section class="gallery-grid">
-      <figure><img src="images/ki-artwork1.jpg" alt="Futuristische KI-Illustration mit Neonfarben" width="1600" height="1000" loading="lazy"><figcaption>Futuristische Neon-Szene</figcaption></figure>
-      <figure><img src="images/ki-artwork2.jpg" alt="Detailreiches Auge – Close-up" width="1600" height="1000" loading="lazy"><figcaption>Detail-Auge – Close-up</figcaption></figure>
-      <figure><img src="images/ki-artwork3.jpg" alt="Cyberpunk-Szene mit weiblichem Charakter" width="1600" height="1000" loading="lazy"><figcaption>Cyberpunk-Porträt</figcaption></figure>
-      <figure><img src="images/ki-artwork4.jpg" alt="Zukunftsporträt in pink-violettem Setting" width="1600" height="1000" loading="lazy"><figcaption>Zukunftsporträt Pink/Violett</figcaption></figure>
-      <figure><img src="images/ki-artwork5.jpg" alt="Glitch-Herz mit Neon-Glow" width="1600" height="1000" loading="lazy"><figcaption>Glitch-Herz</figcaption></figure>
-      <figure><img src="images/ki-artwork6.jpg" alt="Abstrakte 3D-Formen in Pastell" width="1600" height="1000" loading="lazy"><figcaption>3D-Pastell</figcaption></figure>
+    <section class="gallery">
+      <!-- 1–6: deine ALT-Texte wie gehabt -->
+      <figure>
+        <a href="images/ki-artwork1.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork1.jpg" alt="Zebras mit VR-Brillen" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Futuristische Illustration</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork2.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork2.jpg" alt="Makro-Auge" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Makro-Auge</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork3.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork3.jpg" alt="Neon-Szene" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Neon-Szene</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork4.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork4.jpg" alt="Abstrakte Formen" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Abstrakte Formen</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork5.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork5.jpg" alt="Traumlandschaft" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Traumlandschaft</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork6.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork6.jpg" alt="Cyber-Portrait" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Cyber-Portrait</figcaption>
+      </figure>
+
+      <!-- 7–12: neue Motive; Bild 7 mit deinem neuen ALT-Text -->
+      <figure>
+        <a href="images/ki-artwork-7.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-7.jpg" alt="Roboterfamilie lernt, wie Menschen funktionieren" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Roboter-Werkstatt</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork-8.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-8.jpg" alt="Halle mit leuchtenden Flaschen" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Digital Dreams</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork-9.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-9.jpg" alt="Schwebender Astronaut mit Fahne" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Astronaut über Mars-Kolonie</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork-10.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-10.jpg" alt="Dramatische Schachszene in Kathedrale" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Schach & Lichtstrahl</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork-11.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-11.jpg" alt="Lächelndes älteres Puppenpaar" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Puppenpaar</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/ki-artwork-12.jpg" data-lightbox="gal">
+          <img src="images/ki-artwork-12.jpg" alt="Bunte Miniatur-Stadt von oben" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Mini-Stadt</figcaption>
+      </figure>
     </section>
   </main>
+
   <footer role="contentinfo">
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a> | <a href="widerruf.html">Widerruf</a></p>
+    <p>
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a> |
+      <a href="agb.html">AGB</a> |
+      <a href="widerruf.html">Widerruf</a>
+    </p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
-<script data-goatcounter="https://ljv.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-<noscript><img src="https://ljv.goatcounter.com/count?p=/noscript" alt=""></noscript>
+
+  <!-- Lightbox (dein bestehendes script.js) -->
+  <script src="script.js" defer></script>
+
+  <!-- GoatCounter (falls nicht global) -->
+  <script data-goatcounter="https://ljv.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <noscript><img src="https://ljv.goatcounter.com/count?p=/bilder.html" alt=""></noscript>
 </body>
 </html>

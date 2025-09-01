@@ -82,3 +82,46 @@ footer p{color:#fff;margin:.35rem 0}
   .hero{padding:56px 16px}
   .portrait-thumbnail{width:130px;height:130px}
 }
+/* ===== Seite: KI-Bilder – Layout-Fix ===== */
+.page-bilder .hero .hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 pro Reihe auf Desktop */
+  gap: 1.25rem;
+}
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: 1fr; }
+}
+
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+/* ===== Fix: Hero auf KI-Bilder exakt mittig wie auf den anderen Seiten ===== */
+.page-bilder .hero .hero-inner{
+  width: min(100%, 920px);
+  margin-inline: auto;          /* zentriert den Block */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* Portrait, H1, Subtitle exakt mittig */
+  gap: .5rem;
+}
+
+.page-bilder .hero .portrait-thumbnail{
+  display: block;
+  margin: 0 auto 12px;          /* Portrait selbst mittig */
+}
+
+.page-bilder .hero h1,
+.page-bilder .hero .subtitle{
+  margin-left: 0;               /* evtl. vererbte Links-Ausrichtung neutralisieren */
+  text-align: center;
+}
