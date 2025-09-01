@@ -1,69 +1,39 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Danke – Nachricht gesendet</title>
-
-  <!-- Google Fonts (final) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
-  <meta name="theme-color" content="#6b3fa0">
-
-  <!-- GoatCounter -->
-  <script data-goatcounter="https://ljv.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <noscript><img src="https://ljv.goatcounter.com/count?p=/thanks.html" alt="" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
-
-  <header class="hero" role="banner">
-    <div class="hero-content-with-image">
-      <img
-        src="images/lara-portrait.jpg"
-        alt="Portrait von Lara Jacqueline Volkmer"
-        class="portrait-thumbnail"
-        width="120" height="120"
-        fetchpriority="high" decoding="async"
-      />
-      <div>
-        <h1>Danke!</h1>
-        <p>Deine Nachricht wurde gesendet. Ich melde mich in der Regel innerhalb von 1–2 Werktagen.</p>
-        <p><a class="cta-button" href="index.html">Zur Startseite</a></p>
-      </div>
-    </div>
-
-    <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">Über mich</a>
-      <a href="services.html">Leistungen</a>
-      <a href="zertifikate.html">Zertifikate</a>
-      <a href="bilder.html">KI-Bilder</a>
-      <a href="logos.html">KI-Logos</a>
-      <a href="contact.html">Kontakt</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="agb.html">AGB</a>
-      <a href="widerruf.html">Widerruf</a>
-    </nav>
+  <header class="page-hero">
+    <img class="avatar" src="images/lara-portrait.jpg" alt="Portrait Lara Jacqueline Volkmer">
+    <h1>Danke!</h1>
+    <p>Ihre Nachricht wurde erfolgreich gesendet.</p>
   </header>
 
-  <main id="maincontent" class="content" role="main">
-    <p>Falls du noch etwas ergänzen möchtest, schreib mir direkt an
-      <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>.
-    </p>
+  <nav class="tabs">
+    <a href="index.html">Home</a>
+    <a href="about.html">Über mich</a>
+    <a href="services.html">Leistungen</a>
+    <a href="zertifikate.html">Zertifikate</a>
+    <a href="bilder.html">KI-Bilder</a>
+    <a href="logos.html">KI-Logos</a>
+    <a href="contact.html" class="active">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="agb.html">AGB</a>
+    <a href="widerruf.html">Widerruf</a>
+  </nav>
+
+  <main class="container">
+    <p>Ich melde mich in der Regel innerhalb von 1–2 Werktagen. <a href="index.html">Zurück zur Startseite</a></p>
   </main>
 
-  <footer role="contentinfo">
-    <p>
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a> |
-      <a href="agb.html">AGB</a> |
-      <a href="widerruf.html">Widerruf</a>
-    </p>
+  <footer class="site-footer">
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
 </body>

@@ -55,42 +55,34 @@
       </p>
 
       <!-- Netlify-Form: final -->
-      <form
-        name="Kontakt"
-        method="POST"
-        action="thanks.html"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        aria-describedby="antwort-hinweis"
-        class="contact-form"
-      >
-        <!-- Honeypot gegen Spam -->
-        <p hidden>
-          <label>Bitte nicht ausfüllen:
-            <input name="bot-field" />
-          </label>
-        </p>
-        <!-- Netlify braucht den Namen zusätzlich als Hidden -->
-        <input type="hidden" name="form-name" value="Kontakt" />
+     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+  <!-- Netlify braucht dieses Hidden-Feld mit genau demselben Formularnamen -->
+  <input type="hidden" name="form-name" value="contact">
 
-        <div class="form-row">
-          <label for="name">Ihr Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required />
-        </div>
+  <!-- Honeypot (unsichtbar) -->
+  <p class="visually-hidden">
+    <label>Bitte nicht ausfüllen:
+      <input name="bot-field" />
+    </label>
+  </p>
 
-        <div class="form-row">
-          <label for="email">Ihre E-Mail</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-        </div>
+  <!-- Deine sichtbaren Felder -->
+  <label>Ihr Name
+    <input type="text" name="name" required>
+  </label>
 
-        <div class="form-row">
-          <label for="message">Ihre Nachricht</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
+  <label>Ihre E-Mail
+    <input type="email" name="email" required>
+  </label>
 
-        <button type="submit" class="cta-button">Absenden</button>
-        <p id="antwort-hinweis" class="form-hint">Ich antworte in der Regel innerhalb von 1–2 Werktagen.</p>
-      </form>
+  <label>Ihre Nachricht
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <button type="submit">Absenden</button>
+</form>
+
+
     </section>
   </main>
 
