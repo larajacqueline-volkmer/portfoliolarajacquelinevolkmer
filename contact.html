@@ -1,5 +1,7 @@
+
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +13,29 @@
 
   <meta name="description" content="Auswahl meiner KI-generierten Illustrationen.">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .contact-text {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .contact-text a {
+      color: #7b4fe4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body class="page-bilder">
+
   <a class="skip-link" href="#maincontent">Zum Inhalt springen</a>
 
   <!-- Hero -->
@@ -25,17 +48,17 @@
         width="120" height="120"
         fetchpriority="high" decoding="async">
       <h1>KI-Bilder</h1>
-      <p class="subtitle">Eine Auswahl meiner KI-generierten Illustrationen</p>
+      <p class="subtitle">Kontaktaufnahme</p>
     </div>
   </header>
 
-  <!-- Navigation unter dem Banner (wie auf den anderen Seiten) -->
+  <!-- Navigation -->
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="about.html">Über mich</a>
     <a href="services.html">Leistungen</a>
     <a href="zertifikate.html">Zertifikate</a>
-    <a href="bilder.html" >KI-Bilder</a>
+    <a href="bilder.html">KI-Bilder</a>
     <a href="logos.html">KI-Logos</a>
     <a href="contact.html" class="active">Kontakt</a>
     <a href="impressum.html">Impressum</a>
@@ -44,49 +67,23 @@
     <a href="widerruf.html">Widerruf</a>
   </nav>
 
-
   <!-- Inhalt -->
   <main id="maincontent" class="content" role="main">
     <section aria-labelledby="kontakt-headline">
-      <h2 id="kontakt-headline">Kontakt aufnehmen</h2>
-      <p>Am schnellsten per E-Mail an
-        <a href="mailto:volkmer.lara@gmail.com">volkmer.lara@gmail.com</a>
-        – oder bequem über dieses Formular:
+      <h2 id="kontakt-headline" style="text-align:center;">Kontakt aufnehmen</h2>
+
+      <p class="contact-text">
+        Sie können mich kontaktieren über mein LinkedIn-Profil
+        <a href="https://www.linkedin.com/in/lara-jacqueline-volkmer-aa9067254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+           target="_blank" rel="noopener noreferrer">Lara Jacqueline Volkmer</a><br>
+        oder über mein X-Profil
+        <a href="https://x.com/laarajv99?t=EkvMGHwPisTjjfpQrqzW7A&s=09"
+           target="_blank" rel="noopener noreferrer">@laarajv99</a>.
       </p>
-
-      <!-- Netlify-Form: final -->
-     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-  <!-- Netlify braucht dieses Hidden-Feld mit genau demselben Formularnamen -->
-  <input type="hidden" name="form-name" value="contact">
-
-  <!-- Honeypot (unsichtbar) -->
-  <p class="visually-hidden">
-    <label>Bitte nicht ausfüllen:
-      <input name="bot-field" />
-    </label>
-  </p>
-
-  <!-- Deine sichtbaren Felder -->
-  <label>Ihr Name
-    <input type="text" name="name" required>
-  </label>
-
-  <label>Ihre E-Mail
-    <input type="email" name="email" required>
-  </label>
-
-  <label>Ihre Nachricht
-    <textarea name="message" rows="6" required></textarea>
-  </label>
-
-  <button type="submit">Absenden</button>
-</form>
-
-
     </section>
   </main>
 
-  <!-- Footer (einheitlich) -->
+  <!-- Footer -->
   <footer role="contentinfo">
     <p>
       <a href="impressum.html">Impressum</a> |
@@ -96,5 +93,6 @@
     </p>
     <p>&copy; 2025 Lara Jacqueline Volkmer</p>
   </footer>
+
 </body>
 </html>
